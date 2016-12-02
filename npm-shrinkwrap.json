@@ -1647,7 +1647,14 @@
     "commoner": {
       "version": "0.10.4",
       "from": "commoner@>=0.10.1 <0.11.0",
-      "resolved": "https://registry.npmjs.org/commoner/-/commoner-0.10.4.tgz"
+      "resolved": "https://registry.npmjs.org/commoner/-/commoner-0.10.4.tgz",
+      "dependencies": {
+        "glob": {
+          "version": "5.0.15",
+          "from": "glob@>=5.0.15 <6.0.0",
+          "resolved": "https://registry.npmjs.org/glob/-/glob-5.0.15.tgz"
+        }
+      }
     },
     "concat-map": {
       "version": "0.0.1",
@@ -5897,7 +5904,7 @@
     },
     "js-beautify": {
       "version": "1.6.4",
-      "from": "js-beautify@>=1.6.3 <2.0.0",
+      "from": "js-beautify@1.6.4",
       "resolved": "https://registry.npmjs.org/js-beautify/-/js-beautify-1.6.4.tgz"
     },
     "js-tokens": {
