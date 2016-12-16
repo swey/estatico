@@ -9,7 +9,7 @@ var _ = require('lodash'),
 var moduleData = {},
 	template = dataHelper.getFileContent('media.hbs'),
 	compiledTemplate = handlebarsHelper.compile(template)(moduleData),
-	data = _.merge(defaultData, {
+	data = _.merge(defaultData, moduleData, {
 		meta: {
 			title: 'Demo: Media demo',
 			jira: 'JIRA-3',
@@ -20,8 +20,7 @@ var moduleData = {},
 
 				// data: dataHelper.getFormattedJson(moduleData)
 			}
-		},
-		module: moduleData
+		}
 	});
 
 module.exports = data;

@@ -9,7 +9,7 @@ var _ = require('lodash'),
 var moduleData = {},
 	template = dataHelper.getFileContent('imageversions.hbs'),
 	compiledTemplate = handlebarsHelper.compile(template)(moduleData),
-	data = _.merge(defaultData, {
+	data = _.merge(defaultData, moduleData, {
 		meta: {
 			title: 'Demo: Image versions',
 			demo: compiledTemplate,
@@ -20,8 +20,7 @@ var moduleData = {},
 				// data: dataHelper.getFormattedJson(moduleData)
 			},
 			documentation: dataHelper.getDocumentation('imageversions.md')
-		},
-		module: moduleData
+		}
 	});
 
 module.exports = data;

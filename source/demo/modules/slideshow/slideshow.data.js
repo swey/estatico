@@ -21,7 +21,7 @@ var moduleData = {
 	},
 	template = dataHelper.getFileContent('slideshow.hbs'),
 	compiledTemplate = handlebarsHelper.compile(template)(moduleData),
-	data = _.merge(defaultData, {
+	data = _.merge(defaultData, moduleData, {
 		meta: {
 			title: 'Demo: Slideshow',
 			className: 'SlideShow',
@@ -42,8 +42,7 @@ var moduleData = {
 					data: dataHelper.getDataMock('slideshow.mock.js')
 				}
 			]
-		},
-		module: moduleData
+		}
 	});
 
 module.exports = data;
